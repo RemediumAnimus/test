@@ -1,0 +1,101 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title
+        //Reset styles
+        link(rel="stylesheet" href="css/normalize.css")
+        link(rel="stylesheet" href="css/reset.css")
+        //Template styles
+        link(rel="stylesheet" href="css/styles.css")
+    body
+        .page
+            .n-header
+                .n-header__logo
+                    a(href="https://selectel.ru/")
+                        img(src="img/logo.png")
+            .n-main
+                .n-slider#slider
+                    .n-slider__wrap.s-Wr
+                        .n-slider__slide.n-fit.s-Sl
+                            img(src="img/tmp/sl1.jpg")
+                        .n-slider__slide.n-fit.s-Sl
+                            img(src="img/tmp/sl2.jpg")
+                        .n-slider__slide.n-fit.s-Sl
+                            img(src="img/tmp/sl3.png")
+                        .n-slider__slide.n-fit.s-Sl
+                            img(src="img/tmp/sl1.jpg")
+                        .n-slider__slide.n-fit.s-Sl
+                            img(src="img/tmp/sl3.png")
+                        .n-slider__slide.n-fit.s-Sl
+                            img(src="img/tmp/sl1.jpg")
+                    .n-slider__pag.s-pag
+
+                    .n-slider__arrL
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 250.738 250.738" style="enable-background:new 0 0 250.738 250.738;" xml:space="preserve" width="512px" height="512px" fill="#fff">
+                        <g id="Rounded_Rectangle_33_copy_4_1_">
+                        <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M96.633,125.369l95.053-94.533c7.101-7.055,7.101-18.492,0-25.546   c-7.1-7.054-18.613-7.054-25.714,0L58.989,111.689c-3.784,3.759-5.487,8.759-5.238,13.68c-0.249,4.922,1.454,9.921,5.238,13.681   l106.983,106.398c7.101,7.055,18.613,7.055,25.714,0c7.101-7.054,7.101-18.491,0-25.544L96.633,125.369z"/>
+                        </g>
+                        </svg>
+                    .n-slider__arrR
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 250.738 250.738" style="enable-background:new 0 0 250.738 250.738;" xml:space="preserve" width="512px" height="512px" fill="#FFFFFF">
+                        <g id="Rounded_Rectangle_33_copy_4_1_">
+                        <path style="fill-rule:evenodd;clip-rule:evenodd;" d="M96.633,125.369l95.053-94.533c7.101-7.055,7.101-18.492,0-25.546   c-7.1-7.054-18.613-7.054-25.714,0L58.989,111.689c-3.784,3.759-5.487,8.759-5.238,13.68c-0.249,4.922,1.454,9.921,5.238,13.681   l106.983,106.398c7.101,7.055,18.613,7.055,25.714,0c7.101-7.054,7.101-18.491,0-25.544L96.633,125.369z" />
+                        </g>
+                        </svg>
+                .n-timer
+                    .n-timer__header
+                        div.n-text У Тирекса скоро День Рождения!
+                    .n-timer__subheader
+                        div.n-text Осталось:
+                    .n-timer__base
+                        .n-timer__container
+                            .n-timer__square
+                                .n-timer__val
+                                    .n-text.days 10
+                            .n-timer__square
+                                .n-timer__val
+                                    .n-text.hours 10
+                            .n-timer__square
+                                .n-timer__val
+                                    .n-text.sec 10
+                        .n-btn-container.n-open
+                            a.n-btn(href="#") Отправить открытку
+            .n-footer
+               .n-footer__container
+                   .n-footer__header
+                        .n-text Подписывайтесь на Тирекса:
+                   a.n-footer__soc(href="https://vk.com/id379899928")
+                       img(src="img/vk.png")
+            .n-pop.n-form
+                .n-pop__wrap
+                    .n-pop__inside
+                        .n-pop__close.n-close
+                        .n-pop__header
+                            .n-text Поздравить Тирекса
+                        form(method = "GET").n-form
+                            .n-field
+                                input.n-field__input.rfield(name="name" placeholder="Имя")
+                                .n-field__error Поле не заполнено
+                            .n-field
+                                textarea.n-field__textarea.rfield(name="message" placeholder="Поздравление")
+                                .n-field__error Поле не заполнено
+                            .n-field
+                                input(type="submit" value="Поздавить").n-field__submit.n-btn.disabled.n-send
+            .n-pop.n-res
+                .n-pop__wrap
+                    .n-pop__inside.n-pop__inside--mod
+                        .n-pop__close.n-close
+                        .n-pop__header
+                            .n-text Спасибо
+                        .n-pop__info
+                            |Тирекс получил уже&nbsp;
+                            span.n-pop__val
+                            |&nbsp;поздравлений!
+                            |В мире стало на одного счастливого динозавра больше!
+
+    script(src="js/modernizr-custom.js")
+    script(src="js/slider.js")
+    script(src="js/checkField.js")
+    script(src="js/scripts.js")

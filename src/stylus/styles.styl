@@ -1,0 +1,368 @@
+@import 'mixins.styl'
+
+@font-face
+  font-family: 'OpenSans-Regular'
+  src: url('../fonts/OpenSans-Regular.eot')
+  src: url('../fonts/OpenSans-Regular.woff2') format('woff2'), url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype')
+  font-weight: normal;
+  font-style: normal;
+
+
+@font-face
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.ttf') format('truetype'), url('../fonts/OpenSans.svg#OpenSans') format('svg')
+  font-weight: normal
+  font-style: normal
+
+Sans =  'OpenSans'
+dark = #49575f
+
+body
+  min-width: 320px
+
+div
+  box-sizing: border-box
+
+.page
+  font-family: Sans
+  font-size: 16px
+  overflow: hidden
+  
+.n-text
+  color: dark
+
+.n-btn-container
+  text-align: center
+
+.n-btn
+  font-size: 19px
+  background: linear-gradient(to bottom, #6ea608 0%,#468207  100%)
+  display: inline-block
+  padding: 11px 20px
+  border-radius 5px
+  color: #fff
+
+  &:hover
+    background: linear-gradient(to bottom, #468207 0%,#6ea608  100%)
+    
+  &:active
+    background: #4a850c
+
+.n-header
+  text-align: center
+  &__logo
+    padding: 32px
+
+.n-timer
+  text-align: center
+  background: url("../img/pattern.png")
+  padding: 40px 20px 46px 20px
+
+  &__header
+    font-size: 24px
+
+  &__subheader
+    font-size: 18px
+    padding: 20px 0px 0px 0px
+
+  &__base
+    max-width: 484px
+    margin: 0px auto
+
+  &__container
+    width: 100%
+    display: table
+    min-height: 120px
+    padding: 46px 0px
+
+  &__square
+    display: table-cell
+    text-align: center
+    padding: 0px 14px
+
+    @media all and (max-width: 760px)
+      display: block
+      width: 200px
+      margin: 0px auto;
+      margin-bottom: 20px
+
+    &:last-child
+
+      .n-timer__val:after
+        content: 'часов'
+        right: -85px
+        font-size: 19px
+
+        @media all and (max-width: 760px)
+          right: 40px
+          bottom: -80px
+          top: auto
+          display: block
+
+  &__val
+    border: 2px solid #468207
+    line-height: 120px
+    font-size: 72px
+    position: relative
+    width: 134px
+
+    @media all and (max-width: 760px)
+      margin: 0px auto
+
+    &:after
+      display: block
+      content: ':'
+      position: absolute
+      right: -18px
+      top: 0
+      font-size: 24px
+      line-height: 120px
+      color: dark
+
+      @media all and (max-width: 760px)
+        display: none
+
+.n-footer
+  text-align: center
+  background: #fff
+  box-shadow: inset 0px 7px 10px 0px rgba(50, 50, 50, 0.15)
+  padding: 45px 0px
+
+  &__container
+    padding: 0px 20px
+
+  &__header
+    font-size: 24px
+    padding-bottom: 22px
+
+  &__soc
+    opacity: 1
+    &:hover
+      opacity: 0.9
+      
+.n-slider
+  height: 530px
+  overflow: hidden
+  position: relative
+
+  &__slide
+    height: 530px
+    background-size: cover
+
+    img
+      object-fit: cover
+      width: 100%
+      height: 180%
+
+  &__arrL
+    position: absolute
+    top: 0
+    bottom: 0
+    margin: auto
+    left: 0
+    height: 45px
+
+    svg
+      height: 45px
+      width: 100px
+
+      &:hover
+        fill: #468207
+        cursor: pointer
+
+  &__arrR
+    position: absolute
+    top: 0
+    bottom: 0
+    margin: auto
+    right: 0
+    height: 45px
+    transform: rotate(180deg)
+
+    svg
+      height: 45px
+      width: 100px
+
+      &:hover
+        fill: #468207
+        cursor: pointer
+
+  &__pag
+    position: absolute
+    bottom: 0
+    left: 0
+    text-align: center
+    width: 100%
+    padding-bottom: 18px
+
+#slider
+  .s-Wr
+    position: relative
+
+    &:after {
+      display: block
+      content: ''
+      clear: both
+    }
+      
+  .s-Sl
+    float: left
+    width: 100%
+
+    img {
+      display: block
+      width: 100%
+    }
+
+  .s-c
+    display: inline-block
+    width: 12px
+    height: 12px
+    border-radius: 50%
+    background: #fff
+    border: 1px solid #9b9996
+    cursor: pointer
+    margin-right: 4px
+
+    &:hover
+      background: #21aa03
+      border: 1px solid transparent
+
+  .active
+    background: #21aa03
+    
+.n-pop
+  position: fixed
+  z-index: 2
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.5)
+  top: 0
+  left: 0
+  text-align: center
+  display: none
+  opacity: 0
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+
+  &:after
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+    width: 1%
+    margin-right: -1.5%
+
+  &--active
+    opacity: 1
+
+  &__close
+    position: absolute
+    right: -45px
+    top: -40px
+    width: 40px
+    height: 40px
+    cursor: pointer
+
+    @media all and (max-width: 760px)
+      right: 0
+      top: -50px
+
+    &:after
+      display: block
+      content: ''
+      width: 45px
+      height: 2px
+      background: #fff
+      transform: rotate(45deg)
+      position: absolute
+      left: 0
+      top: 20px
+
+    &:before
+      display: block
+      content: ''
+      width: 45px
+      height: 2px
+      background: #fff
+      transform: rotate(-45deg)
+      position: absolute
+      left: 0
+      top: 20px
+
+    &:hover
+      &:before
+        background: #6ea608
+      &:after
+        background: #6ea608
+
+
+  &__header
+    font-size: 20px
+
+  &__wrap
+    display: inline-block
+    vertical-align: middle
+    width: 98%
+
+  &__inside
+    background: #fff
+    padding: 50px 80px
+    max-width: 618px
+    margin: 0px auto
+    text-align: left
+    border-radius 5px
+    box-shadow 0px 0px 15px rgba(0,0,0,0.5)
+    position: relative
+
+    &--mod
+      .n-pop__header
+        font-size: 25px
+        margin-bottom: 20px
+
+.n-field
+    padding-top: 30px
+    position: relative
+
+    &__input
+      border: 1px solid #d2d2d2
+      width: 100%
+      height: 45px
+      padding-left: 20px
+      border-radius: 2px
+      display: block
+
+    &__textarea
+      border: 1px solid #d2d2d2
+      width: 100%
+      padding-left: 20px
+      padding-top: 12px
+      border-radius: 2px
+      height: 82px
+      display: block
+      
+    &__error
+      position: absolute
+      bottom: -25px
+      left: 0
+      color: #cd2e2e
+      display: none
+      font-size: 14px
+      padding-top: 5px
+
+.n-pop__val
+  color: #6ea608
+
+.ok {
+  background: url("../img/ok.png") 97% center no-repeat;
+  border: 1px solid #468207;
+}
+
+.false {
+  background: url("../img/false.png") 97% center no-repeat;
+  border: 1px solid #cd2e2e;
+}
+
+    

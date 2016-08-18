@@ -1,0 +1,21 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "dependencies": {
+    "browser-sync": "*",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "*",
+    "gulp-plumber": "*",
+    "gulp-rigger": "*",
+    "gulp-sass": "*",
+    "gulp-stylus": "^2.5.0",
+    "gulp-watch": "*",
+    "node-sass": "*",
+    "rimraf": "*"
+  },
+  "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-headerfooter": "*",
+    "gulp-jade": "^1.1.0"
+  }
+}
